@@ -13,7 +13,7 @@ def scheduled_job():
     print("The pastebin URL is:%s"%pastebin_url)
 
 @sched.scheduled_job('cron', day_of_week='*', hour=11) # 18 - 7 hour
-def scheduled_job():
+def scheduled_jobs():
     print('This job is run every day at 18pm.')
     r = requests.post(url = API_ENDPOINT, data = '')
     pastebin_url = r.text
